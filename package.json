@@ -1,0 +1,52 @@
+{
+  "name": "jcatalog-react-i18n",
+  "version": "7.17.0",
+  "description": "jCatalog React I18n Extension",
+
+  "author": {
+    "name": "Alexander Frolov",
+    "email": "alexander.frolov@jcatalog.com"
+  },
+
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp watch",
+    "pretest": "npm install",
+    "test": "gulp test",
+    "preclean": "npm install",
+    "clean": "gulp clean",
+    "preproxy": "npm install",
+    "proxy": "gulp proxy",
+    "predoc": "npm install",
+    "doc": "gulp doc",
+    "lint": "gulp lint"
+  },
+
+  "license": "UNLICENSED",
+  "private": "true",
+  "readme": "README.md",
+  "main": "index.js",
+
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "jcatalog-webapp-template": "^1.0.0",
+    "jsdom-no-contextify": "^3.1.0",
+    "node-lessify": "0.0.10",
+    "babelify": "^6.1.3"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-intl": "^1.2.0",
+    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git"
+  },
+
+  "browserify": {
+    "transform": [
+      "babelify",
+      [
+        "node-lessify", {}
+      ]
+    ]
+  }
+}
