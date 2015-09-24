@@ -4,6 +4,6 @@ import {FormattedMessage, FormattedHTMLMessage}          from './app/utils/IntlU
 export default {
   I18nManager: I18nManager,
   FormattedMessage: FormattedMessage,
-  FormattedHTMLMessage: FormattedHTMLMessage
+  FormattedHTMLMessage: FormattedHTMLMessage,
   version: "7.17.0"
 };
