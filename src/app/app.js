@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormattedMessage} from './utils/IntlUtils';
+import FormattedMessage from './components/FormattedMessage.jsx';
 import {I18nManager} from 'jcatalog-i18n';
 
 /**

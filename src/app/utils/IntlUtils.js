@@ -23,7 +23,7 @@ function connectToIntl(Component) {
   return IntlConnection;
 }
 
-export default {
-  FormattedMessage: connectToIntl(FormattedMessage),
-  FormattedHTMLMessage: connectToIntl(FormattedHTMLMessage)
-};
+// export default {
+//   FormattedMessage: connectToIntl(FormattedMessage),
+//   FormattedHTMLMessage: connectToIntl(FormattedHTMLMessage)
+// };

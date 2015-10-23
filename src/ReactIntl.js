@@ -1,5 +1,6 @@
 import {I18nManager}           from 'jcatalog-i18n';
-import {FormattedMessage, FormattedHTMLMessage}          from './app/utils/IntlUtils.js';
+import FormattedMessage         from './app/components/FormattedMessage.jsx';
+import FormattedHTMLMessage         from './app/components/FormattedHTMLMessage.jsx';
 
 export default {
   I18nManager: I18nManager,

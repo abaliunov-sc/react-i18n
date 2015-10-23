@@ -38,8 +38,8 @@
   "dependencies": {
     "intl": "^1.0.1",
     "react": "^0.13.3",
-    "react-intl": "^1.2.0",
-    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git"
+    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git",
+    "underscore": "^1.8.3"
   },
 
   "browserify": {

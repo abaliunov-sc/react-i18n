@@ -46,7 +46,7 @@ module.exports = {
         //destination folder
         dest: dest,
         //list of entry files related basedir
-        entries: ['IeIntlPolyfill.js', 'app.js'],
+        entries: ['app.js'],
 
 
         //output file name
