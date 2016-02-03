@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import FormattedMessage from './components/FormattedMessage.jsx';
 import {I18nManager} from 'jcatalog-i18n';
 
@@ -83,5 +84,5 @@ class App extends React.Component {
 }
 
 export default function(element, props) {
-  return React.render(<App {...props} locale="en-US" />, element);
+  return ReactDOM.render(<App {...props} locale="en-US" />, element);
 };
