@@ -34,7 +34,7 @@ const common = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3001', // WebpackDevServer host and port
     'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    path.resolve(__dirname, 'src/app/app')
+    path.resolve(__dirname, 'src/main.jsx')
   ],
   output: {
     path: path.resolve(__dirname, 'build'),

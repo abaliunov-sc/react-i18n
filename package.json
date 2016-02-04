@@ -13,7 +13,7 @@
     "index.js"
   ],
   "scripts": {
-    "clean": "rimraf build/*.js dist esdoc lib",
+    "clean": "rimraf build dist esdoc lib",
     "lint": "eslint src",
     "jscs": "jscs src",
     "test": "mocha src/**/*.spec.js",

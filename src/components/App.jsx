@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18nManager } from 'jcatalog-i18n';
-import FormattedMessage from './components/FormattedMessage';
+import FormattedMessage from './FormattedMessage.jsx';
 
 /**
  * Just sample App for i18n usage demonstration.
  *
  * @author Alexander Frolov
  */
-class App extends React.Component {
+export default class App extends React.Component {
 
   static propTypes = {
     locale: React.PropTypes.string.isRequired,
@@ -55,9 +55,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default function abc(element, props) {
-  return ReactDOM.render(<App {...props} locale="en-US"/>, element);
-}
-
-abc(document.body, { title: 'Hello World!' });
