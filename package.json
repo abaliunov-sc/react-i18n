@@ -1,21 +1,30 @@
 {
   "name": "jcatalog-react-i18n",
-  "version": "7.17.0",
+  "version": "8.0.0",
   "description": "jCatalog React I18n Extension",
   "main": "index.js",
   "private": "true",
+  "files": [
+    "dist",
+    "lib",
+    "scripts/fix-prepublish.js",
+    "src",
+    ".babelrc",
+    "index.js"
+  ],
   "scripts": {
-    "prestart": "npm install",
-    "start": "gulp watch",
-    "pretest": "npm install",
-    "test": "gulp test",
-    "preclean": "npm install",
-    "clean": "gulp clean",
-    "preproxy": "npm install",
-    "proxy": "gulp proxy",
-    "predoc": "npm install",
-    "doc": "gulp doc",
-    "lint": "gulp lint"
+    "clean": "rimraf build/*.js dist esdoc lib",
+    "lint": "eslint src",
+    "jscs": "jscs src",
+    "test": "mocha src/**/*.spec.js",
+    "build": "npm run clean && npm run lint && npm run jscs && npm test && npm run build-lib && npm run build-umd && npm run build-umd-min",
+    "build-lib": "babel src --out-dir lib",
+    "build-umd": "cross-env NODE_ENV=development webpack --progress --colors --config webpack.config.js",
+    "build-umd-min": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js",
+    "start": "cross-env NODE_ENV=production webpack-dev-server",
+    "esdoc": "esdoc -c esdoc.json",
+    "postinstall": "node ./scripts/fix-prepublish.js postinstall",
+    "prepublish": "npm run build-lib"
   },
   "author": {
     "name": "Alexander Frolov",
@@ -24,6 +33,11 @@
   "license": "UNLICENSED",
   "readme": "README.md",
   "dependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "intl": "^1.0.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.7",
@@ -31,20 +45,31 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "babelify": "^6.1.3",
-    "chai": "^3.2.0",
-    "gulp": "^3.9.0",
-    "jcatalog-webapp-template": "^1.0.0",
-    "jsdom-no-contextify": "^3.1.0",
-    "node-lessify": "0.0.10"
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "chai": "^3.4.1",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.21.0",
+    "esdoc": "^0.4.3",
+    "esdoc-es7-plugin": "0.0.3",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.16.1",
+    "html-webpack-plugin": "^2.8.1",
+    "jscs": "^2.9.0",
+    "jsdom": "^8.0.2",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.6",
+    "react-hot-loader": "^1.3.0",
+    "rimraf": "^2.5.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3"
   },
-  "browserify": {
-    "transform": [
-      "babelify",
-      [
-        "node-lessify",
-        {}
-      ]
-    ]
+  "engines": {
+    "node": ">=4.2.4",
+    "npm": ">=3.6.0"
   }
 }
