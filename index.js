@@ -1,1 +1,1 @@
-export * from './src/ReactIntl.js'
+export * from './src'
