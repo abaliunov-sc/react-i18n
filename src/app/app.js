@@ -1,20 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FormattedMessage from './components/FormattedMessage.jsx';
 import { I18nManager } from 'jcatalog-i18n';
+import FormattedMessage from './components/FormattedMessage';
 
 /**
- * Root tag of custom componet should register own messages.
+ * Just sample App for i18n usage demonstration.
  *
  * @author Alexander Frolov
  */
-class Header extends React.Component {
+class App extends React.Component {
+
+  static propTypes = {
+    locale: React.PropTypes.string.isRequired,
+  };
+
   static contextTypes = {
     i18n: React.PropTypes.object.isRequired,
   };
 
   static childContextTypes = {
     i18n: React.PropTypes.object.isRequired,
+  };
+
+  state = {
+    i18n: new I18nManager(this.props.locale),
   };
 
   getChildContext() {
@@ -29,43 +38,7 @@ class Header extends React.Component {
     };
 
     return {
-      i18n: this.context.i18n.register('Header', [intlData]),
-    };
-  }
-
-  /**
-   * Render header component
-   *
-   * @returns {XML}
-   */
-  render() {
-    return (
-      <header className="header-style">
-        <a href="#" className="logo-style" title={this.context.i18n.getMessage('logo.title')}>
-          <FormattedMessage message="logo.text" />
-        </a>
-      </header>
-    );
-  }
-}
-
-/**
- * Just sample App for i18n usage demonstration.
- *
- * @author Alexander Frolov
- */
-class App extends React.Component {
-  static propTypes = {
-    locale: React.PropTypes.string.isRequired,
-  };
-
-  static childContextTypes = {
-    i18n: React.PropTypes.object.isRequired,
-  };
-
-  getChildContext() {
-    return {
-      i18n: new I18nManager(this.props.locale),
+      i18n: this.state.i18n.register('Header', [intlData]),
     };
   }
 
@@ -74,17 +47,17 @@ class App extends React.Component {
    */
   render() {
     return (
-
-      <div>
-        <Header />
-      </div>
-
-      );
+      <header className="header-style">
+        <a href="#" className="logo-style" title={this.state.i18n.getMessage('logo.title')}>
+          <FormattedMessage message="logo.text"/>
+        </a>
+      </header>
+    );
   }
 }
 
 export default function abc(element, props) {
-  return ReactDOM.render(<App {...props} locale="en-US" />, element);
+  return ReactDOM.render(<App {...props} locale="en-US"/>, element);
 }
 
-abc(document.body, {title: 'Hello World!'});
+abc(document.body, { title: 'Hello World!' });

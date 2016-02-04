@@ -8,7 +8,6 @@
   "rules": {
     "comma-dangle": [2, "always-multiline"],
     "max-len": [1, 200],
-    "no-loop-func": 0,
-    "react/no-multi-comp": 0
+    "no-loop-func": 0
   }
 }
