@@ -14,10 +14,6 @@ export default class App extends React.Component {
     locale: React.PropTypes.string.isRequired,
   };
 
-  static contextTypes = {
-    i18n: React.PropTypes.object.isRequired,
-  };
-
   static childContextTypes = {
     i18n: React.PropTypes.object.isRequired,
   };
@@ -32,7 +28,7 @@ export default class App extends React.Component {
       messages: {
         logo: {
           title: 'Title',
-          text: 'Text 4',
+          text: 'Text',
         },
       },
     };

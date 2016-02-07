@@ -6,4 +6,6 @@ function render(element, props) {
   return ReactDOM.render(<App {...props} locale="en-US"/>, element);
 }
 
-render(document.body, { title: 'Hello World!' });
+let element = document.createElement('div');
+document.body.appendChild(element);
+render(element, { title: 'Hello World!' });

@@ -12,7 +12,9 @@ let plugins = [
   new webpack.DefinePlugin({
     NODE_ENV: JSON.stringify(NODE_ENV)
   }),
+  new webpack.optimize.DedupePlugin(),
   new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.ContextReplacementPlugin(/node_modules[\\\/]moment[\\\/]locale/, /en|de/),
   new webpack.NoErrorsPlugin(),
   new HtmlWebpackPlugin()
 ];
@@ -34,16 +36,16 @@ const common = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3001', // WebpackDevServer host and port
     'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    path.resolve(__dirname, 'src/main.jsx')
+    path.join(__dirname, 'src/main.jsx')
   ],
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.join(__dirname, 'build'),
     filename: 'app.bundle.js',
     library: 'app',
     libraryTarget: 'umd'
   },
 
-  devtool: NODE_ENV == 'development' ? 'cheap-module-source-map' : null,
+  devtool: NODE_ENV == 'production' ? 'source-map' : 'eval-source-map',
 
   plugins: plugins,
 
@@ -67,7 +69,8 @@ const common = {
       {
         test: /\.jsx?$/,
         include: [
-          path.join(__dirname, 'src')
+          path.join(__dirname, 'src'),
+          /node_modules[\\\/]jcatalog-i18n/
         ],
         loaders: ['react-hot-loader', 'babel-loader']
       }
@@ -79,7 +82,7 @@ const common = {
 if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devServer: {
-      contentBase: path.resolve(__dirname, 'build'),
+      contentBase: path.join(__dirname, 'build'),
 
       // Enable history API fallback so HTML5 History API based
       // routing works. This is a good default that will come
