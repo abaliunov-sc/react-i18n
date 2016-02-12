@@ -7,8 +7,8 @@ export default class FormattedHTMLMessage extends React.Component {
   };
 
   render() {
-    const message = this.props.message ? this.context.i18n.getMessage(this.props.message, _.omit(this.props, "message")) : null;
+    const message = this.props.message ? this.context.i18n.getMessage(this.props.message, _.omit(this.props, 'message')) : null;
 
-    return (<span dangerouslySetInnerHTML={{__html: message}} />);
+    return (<span dangerouslySetInnerHTML={ { __html: message } } />);
   }
 }
