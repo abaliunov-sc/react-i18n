@@ -1,53 +1,65 @@
 {
   "name": "jcatalog-react-i18n",
-  "version": "7.17.0",
+  "version": "8.0.0",
   "description": "jCatalog React I18n Extension",
-
+  "main": "index.js",
+  "private": "true",
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rimraf esdoc",
+    "lint": "eslint . --ext .js,.jsx",
+    "jscs": "jscs .",
+    "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
+    "start": "cross-env NODE_ENV=development node src/www/devServer.js",
+    "esdoc": "esdoc -c esdoc.json"
+  },
   "author": {
     "name": "Alexander Frolov",
     "email": "alexander.frolov@jcatalog.com"
   },
-
-  "scripts": {
-    "prestart": "npm install",
-    "start": "gulp watch",
-    "pretest": "npm install",
-    "test": "gulp test",
-    "preclean": "npm install",
-    "clean": "gulp clean",
-    "preproxy": "npm install",
-    "proxy": "gulp proxy",
-    "predoc": "npm install",
-    "doc": "gulp doc",
-    "lint": "gulp lint"
-  },
-
   "license": "UNLICENSED",
-  "private": "true",
   "readme": "README.md",
-  "main": "index.js",
-
-  "devDependencies": {
-    "chai": "^3.2.0",
-    "gulp": "^3.9.0",
-    "jcatalog-webapp-template": "^1.0.0",
-    "jsdom-no-contextify": "^3.1.0",
-    "node-lessify": "0.0.10",
-    "babelify": "^6.1.3"
-  },
   "dependencies": {
     "intl": "^1.0.1",
     "react": "^0.14.6",
-    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git",
+    "react-dom": "^0.14.7",
+    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git#webpack",
     "underscore": "^1.8.3"
   },
-
-  "browserify": {
-    "transform": [
-      "babelify",
-      [
-        "node-lessify", {}
-      ]
-    ]
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "chai": "^3.4.1",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.21.0",
+    "esdoc": "^0.4.3",
+    "esdoc-es7-plugin": "0.0.3",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.16.1",
+    "express": "^4.13.4",
+    "jscs": "^2.9.0",
+    "jsdom": "^8.0.2",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.6",
+    "rimraf": "^2.5.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=5.5.0",
+    "npm": ">=3.6.0"
   }
 }
