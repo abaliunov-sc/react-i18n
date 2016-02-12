@@ -9,14 +9,11 @@
     "index.js"
   ],
   "scripts": {
-    "clean": "rimraf build dist esdoc lib",
-    "lint": "eslint src",
-    "jscs": "jscs src",
-    "test": "mocha src/**/*.spec.js",
-    "build": "npm run clean && npm run lint && npm run jscs && npm test && npm run build-umd && npm run build-umd-min",
-    "build-umd": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress --colors",
-    "build-umd-min": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --colors",
-    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "clean": "rimraf build esdoc",
+    "lint": "eslint .",
+    "jscs": "jscs .",
+    "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
+    "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "esdoc -c esdoc.json"
   },
   "author": {
@@ -39,6 +36,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.0",
     "babel-preset-stage-0": "^6.3.13",
     "chai": "^3.4.1",
     "cross-env": "^1.0.7",
@@ -48,18 +46,17 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^3.1.0",
     "eslint-plugin-react": "^3.16.1",
-    "html-webpack-plugin": "^2.8.1",
+    "express": "^4.13.4",
     "jscs": "^2.9.0",
     "jsdom": "^8.0.2",
     "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.6",
-    "react-hot-loader": "^1.3.0",
     "rimraf": "^2.5.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.7.3"
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.7.1"
   },
   "engines": {
     "node": ">=5.5.0",
