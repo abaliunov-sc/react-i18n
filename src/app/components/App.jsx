@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { I18nManager } from 'jcatalog-i18n';
 import FormattedMessage from './FormattedMessage.jsx';
 
