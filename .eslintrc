@@ -1,12 +1,15 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": "airbnb/base",
   "env": {
     "node": true,
     "mocha": true
   },
   "rules": {
-    "no-console": 0,
+    "no-loop-func": 0,
     "comma-dangle": [2, "always-multiline"]
-  }
+  },
+  "plugins": [
+    "react"
+  ]
 }

@@ -2,12 +2,20 @@ import React from 'react';
 import _ from 'underscore';
 
 export default class FormattedHTMLMessage extends React.Component {
+
+  static propTypes = {
+    message: React.PropTypes.string,
+  };
+
   static contextTypes = {
-    i18n: React.PropTypes.object.isRequired
+    i18n: React.PropTypes.object.isRequired,
   };
 
   render() {
-    const message = this.props.message ? this.context.i18n.getMessage(this.props.message, _.omit(this.props, 'message')) : null;
+    let message = null;
+    if (this.props.message) {
+      message = this.context.i18n.getMessage(this.props.message, _.omit(this.props, 'message'));
+    }
 
     return (<span dangerouslySetInnerHTML={ { __html: message } } />);
   }
