@@ -14,7 +14,7 @@
     "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "esdoc -c esdoc.json",
-    "pub": "fluid-publish --options=\"{'devTag': 'SNAPSHOT'}\" --test"
+    "pub": "fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\" --test"
   },
   "author": {
     "name": "Alexander Frolov",
@@ -59,12 +59,6 @@
     "webpack": "1.12.2",
     "webpack-dev-middleware": "1.5.1",
     "webpack-hot-middleware": "2.7.1"
-  },
-  "defaultOptions": {
-    "changesCmd": "",
-    "devVersion": "${version}-${preRelease}.${timestamp}.${revision}",
-    "devTag": "SNAPSHOT",
-    "moduleRoot": ""
   },
   "engines": {
     "node": "4.x",
