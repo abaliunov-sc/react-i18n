@@ -13,7 +13,8 @@
     "jscs": "jscs .",
     "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
-    "esdoc": "esdoc -c esdoc.json"
+    "esdoc": "esdoc -c esdoc.json",
+    "pub": "fluid-publish --test"
   },
   "author": {
     "name": "Alexander Frolov",
