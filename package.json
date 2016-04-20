@@ -59,6 +59,11 @@
     "webpack-dev-middleware": "1.5.1",
     "webpack-hot-middleware": "2.7.1"
   },
+  "defaultOptions": {
+    "devVersion": "${version}-${preRelease}.${timestamp}.${revision}",
+    "devTag": "SNAPSHOT",
+    "moduleRoot": ""
+  },
   "engines": {
     "node": "4.x",
     "npm": "2.1.x"
