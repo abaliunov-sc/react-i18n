@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "jCatalog React I18n Extension",
   "main": "index.js",
-  "private": "true",
   "files": [
     "src",
     "index.js"
