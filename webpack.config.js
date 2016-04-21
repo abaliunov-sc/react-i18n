@@ -42,8 +42,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: [
-          path.join(__dirname, 'src'),
-          /node_modules[\\\/]jcatalog-i18n/,
+          path.join(__dirname, 'src')
         ],
         loader: 'babel-loader',
       },

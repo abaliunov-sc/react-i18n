@@ -1,11 +1,10 @@
 {
   "name": "jcatalog-react-i18n",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "jCatalog React I18n Extension",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "src",
-    "index.js"
+    "lib"
   ],
   "scripts": {
     "clean": "rimraf esdoc",
@@ -14,7 +13,10 @@
     "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "esdoc -c esdoc.json",
-    "pub": "fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\" --test"
+    "build-npm": "babel --ignore *.spec.js src --out-dir lib",
+    "publish-test": "rimraf lib && npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\" --test",
+    "publish-dev": "rimraf lib && npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\"",
+    "publish-release": "rimraf lib && npm run build-npm && fluid-publish --standard"
   },
   "author": {
     "name": "Alexander Frolov",
@@ -25,7 +27,7 @@
   "dependencies": {
     "babel-eslint": "5.0.0",
     "intl": "1.1.0",
-    "jcatalog-i18n": "git+http://buildserver.jcatalog.com/git/js-i18n.git",
+    "jcatalog-i18n": "1.1.0",
     "react": "0.14.7",
     "react-dom": "0.14.7",
     "underscore": "1.8.3"
@@ -58,7 +60,8 @@
     "style-loader": "0.13.0",
     "webpack": "1.12.2",
     "webpack-dev-middleware": "1.5.1",
-    "webpack-hot-middleware": "2.7.1"
+    "webpack-hot-middleware": "2.7.1",
+    "fluid-publish": "^1.1.0"
   },
   "engines": {
     "node": "4.x",
