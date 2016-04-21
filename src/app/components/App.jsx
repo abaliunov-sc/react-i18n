@@ -1,6 +1,6 @@
 import React from 'react';
 import { I18nManager } from 'jcatalog-i18n';
-import FormattedMessage from './FormattedMessage.jsx';
+import FormattedMessage from './FormattedMessage';
 
 /**
  * Just sample App for i18n usage demonstration.

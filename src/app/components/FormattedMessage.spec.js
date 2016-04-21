@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import { I18nManager } from 'jcatalog-i18n';
-import FormattedMessage from './FormattedMessage.jsx';
+import FormattedMessage from './FormattedMessage';
 
 class TestComponent extends React.Component {
 
