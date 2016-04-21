@@ -13,7 +13,7 @@
     "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "esdoc -c esdoc.json",
-    "build-npm": "babel --ignore *.spec.js src --out-dir lib",
+    "build-npm": "babel --ignore *.spec.js src/app --out-dir lib",
     "publish-test": "rimraf lib && npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\" --test",
     "publish-dev": "rimraf lib && npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\"",
     "publish-release": "rimraf lib && npm run build-npm && fluid-publish --standard"
