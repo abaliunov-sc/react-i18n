@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "clean": "rimraf esdoc",
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint . --ext .js",
     "jscs": "jscs .",
     "test": "cross-env NODE_ENV=test mocha src/**/*.spec.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",

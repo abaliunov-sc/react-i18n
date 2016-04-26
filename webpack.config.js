@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
 const plugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
@@ -19,12 +21,13 @@ module.exports = {
   },
 
   devtool: 'cheap-module-eval-source-map',
+  bail: NODE_ENV === 'production' ? true : false,
 
   plugins,
 
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.json', '.jsx', '.js'],
+    extensions: ['', '.json', '.js'],
   },
 
   resolveLoader: {
@@ -40,7 +43,7 @@ module.exports = {
         loader: 'json-loader',
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         include: [
           path.join(__dirname, 'src')
         ],

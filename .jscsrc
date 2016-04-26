@@ -1,7 +1,7 @@
 {
   "esnext": true,
   "preset": "airbnb",
-  "fileExtensions": [".js", ".jsx"],
+  "fileExtensions": [".js"],
   "safeContextKeyword": ["that"],
   "requireTrailingComma": {
     "ignoreSingleValue": true,
