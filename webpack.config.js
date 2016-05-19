@@ -1,14 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-
-const plugins = [
-  new webpack.optimize.OccurenceOrderPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin(),
-];
-
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
@@ -20,34 +12,38 @@ module.exports = {
     filename: 'app.bundle.js',
   },
 
-  devtool: 'cheap-module-eval-source-map',
-  bail: NODE_ENV === 'production' ? true : false,
-
-  plugins,
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+  ],
 
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.json', '.js'],
+    extensions: ['', '.json', '.js']
   },
 
   resolveLoader: {
     modulesDirectories: ['node_modules'],
     moduleTemplates: ['*-loader', '*'],
-    extensions: ['', '.js'],
+    extensions: ['', '.js']
   },
 
   module: {
     loaders: [
       {
-        include: /\.json$/,
-        loader: 'json-loader',
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
-        test: /\.js?$/,
+        test: /.js$/,
+        loader: 'babel-loader',
         include: [
           path.join(__dirname, 'src')
         ],
-        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react', 'stage-0']
+        }
       },
     ],
   },
