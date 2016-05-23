@@ -12,7 +12,7 @@
     "test": "mocha src/**/*.spec.js --require test/mocha-setup.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "rimraf esdoc && esdoc -c esdoc.json",
-    "build-npm": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --ignore *.spec.js src --out-dir lib",
+    "build-npm": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --ignore *.spec.js src/app --out-dir lib",
     "publish-test": "npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\" --test",
     "publish-dev": "npm run build-npm && fluid-publish --options=\"{\\\"devTag\\\": \\\"SNAPSHOT\\\"}\"",
     "publish-release": "npm run build-npm && fluid-publish --standard"
