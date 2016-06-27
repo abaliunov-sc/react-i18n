@@ -60,7 +60,7 @@
     "webpack": "1.12.2",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0",
-    "jcatalog-dev-tools": "2.0.4"
+    "jcatalog-dev-tools": "2.0.8"
   },
   "engines": {
     "node": "4.x",
