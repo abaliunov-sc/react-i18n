@@ -30,7 +30,7 @@
   "license": "UNLICENSED",
   "readme": "README.md",
   "dependencies": {
-    "jcatalog-i18n": "1.1.0",
+    "jcatalog-i18n": "1.1.5",
     "react": "0.14.8",
     "react-dom": "0.14.8",
     "underscore": "1.8.3"
