@@ -1,0 +1,14 @@
+
+Release 1.1.1 Thu Nov 17 2016 15:34:30 GMT+0300 (Belarus Standard Time)
+=======================================================
+
+ - (PIM-11430) Updated jcatalog-i18n version (Sergey Korsik <ksy@SCAND.LOCAL>, Thu Nov 17 15:22:14 2016 +0300)
+ - Updated dev-tools version. (dzhitomirsky <dzhitomirsky@jcatalog.com>, Thu Jul 14 13:03:45 2016 +0300)
+ - Updating dev tools dependency (Dmitry Divin <dmitry.divin@jcatalog.com>, Mon Jun 27 14:43:20 2016 +0300)
+ - Refactored build process. (dzhitomirsky <dzhitomirsky@jcatalog.com>, Wed Jun 22 14:56:01 2016 +0300)
+ - Fixing build (Dmitry Divin <dmitry.divin@jcatalog.com>, Mon May 23 15:58:36 2016 +0300)
+ - Cleaup code and dependencies. Applying jCatalog ESLint rules. (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Thu May 19 23:44:53 2016 +0300)
+ - Fixing engines (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Wed Apr 27 14:59:46 2016 +0300)
+ - Adjusting project config (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Tue Apr 26 12:27:01 2016 +0300)
+ - Adjusting build process (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Tue Apr 26 12:16:52 2016 +0300)
+ - Updating version (Dmitry Divin <dmitry.divin@jcatalog.com>, Thu Apr 21 14:18:08 2016 +0300)
