@@ -63,7 +63,7 @@
     "jcatalog-dev-tools": "2.0.14"
   },
   "engines": {
-    "node": "4.x",
-    "npm": "2.x"
+    "node": ">=4.x",
+    "npm": ">=2.x"
   }
 }
