@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import { I18nManager } from 'jcatalog-i18n';
+import { I18nManager } from '@opuscapita/i18n';
 import FormattedMessage from './FormattedMessage';
 
 class TestComponent extends React.Component {

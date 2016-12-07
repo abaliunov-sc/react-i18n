@@ -1,5 +1,5 @@
 import React from 'react';
-import { I18nManager } from 'jcatalog-i18n';
+import { I18nManager } from '@opuscapita/i18n';
 import FormattedMessage from './FormattedMessage';
 
 /**

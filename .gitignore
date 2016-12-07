@@ -1,8 +1,9 @@
-*.log
 *.iml
+*.log
 .idea
-node_modules
 build
 dist
 esdoc
 lib
+node_modules
+yarn.lock
