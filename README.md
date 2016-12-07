@@ -1,4 +1,4 @@
-# jCatalog React Intl
+# OpusCapita React Intl
 
 This is an extension for [React Intl](https://github.com/yahoo/react-intl) component.
 
