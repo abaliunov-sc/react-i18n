@@ -12,10 +12,9 @@
     "test": "mocha src/**/*.spec.js --require test/mocha-setup.js",
     "start": "cross-env NODE_ENV=development node src/www/devServer.js",
     "esdoc": "rimraf esdoc && esdoc -c esdoc.json",
-
+    "decorate-jenkinsfile": "decorate-jenkinsfile",
     "npm-build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --ignore *.spec.js src/app --out-dir lib",
     "npm-publish": "npm run npm-build && npm-publish",
-
     "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release"
   },
@@ -36,6 +35,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
+    "@opuscapita/npm-scripts": "1.0.4",
     "babel-cli": "6.9.0",
     "babel-core": "6.9.0",
     "babel-eslint": "6.0.4",
@@ -59,8 +59,7 @@
     "rimraf": "2.5.2",
     "webpack": "1.12.2",
     "webpack-dev-middleware": "1.6.1",
-    "webpack-hot-middleware": "2.10.0",
-    "jcatalog-dev-tools": "2.0.14"
+    "webpack-hot-middleware": "2.10.0"
   },
   "engines": {
     "node": ">=4.x",
