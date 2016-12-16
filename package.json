@@ -1,5 +1,5 @@
 {
-  "name": "@opuscapita/react-i18n",
+  "name": "opuscapita-react-i18n",
   "version": "1.0.2",
   "description": "OpusCapita React I18n Extension",
   "main": "lib/index.js",
@@ -22,20 +22,16 @@
     "type": "git",
     "url": "https://github.com/OpusCapitaBES/js-react-i18n.git"
   },
-  "author": {
-    "name": "Alexander Frolov",
-    "email": "alexander.frolov@jcatalog.com"
-  },
   "license": "UNLICENSED",
   "readme": "README.md",
   "dependencies": {
-    "@opuscapita/i18n": "1.0.3",
+    "opuscapita-i18n": "1.0.7",
     "react": "0.14.8",
     "react-dom": "0.14.8",
     "underscore": "1.8.3"
   },
   "devDependencies": {
-    "@opuscapita/npm-scripts": "1.0.4",
+    "opuscapita-npm-scripts": "1.0.6",
     "babel-cli": "6.9.0",
     "babel-core": "6.9.0",
     "babel-eslint": "6.0.4",

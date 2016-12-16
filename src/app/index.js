@@ -1,4 +1,4 @@
-import { I18nManager } from '@opuscapita/i18n';
+import { I18nManager } from 'opuscapita-i18n';
 import FormattedMessage from './components/FormattedMessage';
 import FormattedHTMLMessage from './components/FormattedHTMLMessage';
 
