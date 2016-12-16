@@ -1,9 +1,8 @@
 *.iml
 *.log
 .idea
-build
-dist
-esdoc
 lib
 node_modules
 yarn.lock
+.nyc_output
+coverage

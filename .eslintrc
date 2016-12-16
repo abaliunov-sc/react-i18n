@@ -1,6 +1,3 @@
 {
-  "extends": "eslint-config-jcatalog",
-  "env": {
-    "mocha": true
-  }
+  "extends": "opuscapita"
 }

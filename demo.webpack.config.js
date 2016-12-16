@@ -2,14 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    'webpack-hot-middleware/client',
-    path.join(__dirname, 'src/app/app.js'),
-  ],
+  entry: './src/client/demo/index.js',
   output: {
-    path: path.join(__dirname, 'build'),
     publicPath: '/static/',
-    filename: 'app.bundle.js',
+    path: path.resolve(__dirname, 'static'),
+    filename: 'demo.bundle.js',
+    library: 'demo',
+    libraryTarget: 'umd'
   },
 
   plugins: [
@@ -32,8 +31,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.json$/,
-        loader: 'json-loader'
+        test: /\.md$/,
+        loader: 'raw-loader'
       },
       {
         test: /.js$/,
@@ -42,7 +41,8 @@ module.exports = {
           path.join(__dirname, 'src')
         ],
         query: {
-          presets: ['es2015', 'react', 'stage-0']
+          presets: ['es2015', 'react', 'stage-0'],
+          plugins: ['transform-decorators-legacy']
         }
       },
     ],

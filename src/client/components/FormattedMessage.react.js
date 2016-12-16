@@ -1,8 +1,7 @@
 import React from 'react';
 import _ from 'underscore';
 
-export default class FormattedHTMLMessage extends React.Component {
-
+export default class FormattedMessage extends React.Component {
   static propTypes = {
     message: React.PropTypes.string,
   };
@@ -17,6 +16,6 @@ export default class FormattedHTMLMessage extends React.Component {
       message = this.context.i18n.getMessage(this.props.message, _.omit(this.props, 'message'));
     }
 
-    return (<span dangerouslySetInnerHTML={ { __html: message } } />);
+    return (<span>{message}</span>);
   }
 }
