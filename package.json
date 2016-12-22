@@ -1,6 +1,6 @@
 {
   "name": "opuscapita-react-i18n",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "OpusCapita React I18n Extension",
   "main": "lib/index.js",
   "files": [
