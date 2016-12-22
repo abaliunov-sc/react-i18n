@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/no-multi-comp */
 import 'jsdom-global/register';
 import React, { Component, PropTypes } from 'react';
 import I18nContext from '.';
 import { I18nManager } from 'opuscapita-i18n';
 import { expect } from 'chai';
-import { mount, render, shallow } from 'enzyme';
-import defaultProps from './defaultProps';
+import { mount, render } from 'enzyme';
 import FormattedMessage from '../FormattedMessage/FormattedMessage.react.js';
 
 let instanceOfI18nManager = new I18nManager('en', null);
@@ -69,8 +70,8 @@ describe('I18nContext', () => {
         <I18nContext
           locale='en'
           intlDatas={[
-            { locales: ['en'], messages: { hi: 'Hello', bye: 'Bye!' }},
-            { locales: ['de'], messages: { hi: 'Willkomm', bye: 'Auf Wiedersehen!' }}
+            { locales: ['en'], messages: { hi: 'Hello', bye: 'Bye!' } },
+            { locales: ['de'], messages: { hi: 'Willkomm', bye: 'Auf Wiedersehen!' } }
           ]}
         >
           <FormattedMessage message='hi' />

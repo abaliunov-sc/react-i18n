@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 import I18nManager from 'opuscapita-i18n/lib/utils/I18nManager';
 import defaultProps from './defaultProps';
 
@@ -6,6 +6,11 @@ class I18nContext extends Component {
   constructor(props) {
     super(props);
     this.initManager(props);
+  }
+
+  getChildContext() {
+    let i18n = (this.context && this.context.i18n) || this.i18n;
+    return ({ i18n });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -20,11 +25,6 @@ class I18nContext extends Component {
       defaultLocale
     } = props;
     this.i18n = new I18nManager(locale, intlDatas, formatInfos, defaultLocale);
-  }
-
-  getChildContext() {
-    let i18n = (this.context && this.context.i18n) || this.i18n;
-    return ({ i18n });
   }
 
   render() {
