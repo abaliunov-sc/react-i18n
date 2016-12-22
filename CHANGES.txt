@@ -1,4 +1,29 @@
 
+Release 1.0.3 Thu Dec 22 2016 15:46:23 GMT+0300 (+03)
+=======================================================
+
+ - Fixed npm-build (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:46:11 2016 +0300)
+ - Fixed package bundle exports (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:43:25 2016 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapitaBES/js-react-i18n (af10a17 05330a2, kirillvolkovich <kirill.volkovich@jcatalog.com>)
+ - Changed  goal. *.SCOPE and *.md not ignored now (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:38:23 2016 +0300)
+ - Merge pull request #1 from OpusCapitaBES/feature-I18nContext-component
+    
+    I18nContext component (92ae07a 15db82b, Kirill Volkovich <kirill.volkovich@jcatalog.com>)
+ - Written tests on `i18nContext` component (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:29:07 2016 +0300)
+ - Written documentation on `I18nContext` component (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:28:26 2016 +0300)
+ - Modified webpack config. Added loaders. (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:27:41 2016 +0300)
+ - Implemented `I18nContext` component
+    
+    Use it as a parent component if you need pass I18nManager to children context.
+    Instance of I18nManager exposes as context.i18n.
+    
+    Now it has no support of I18nManager.register(). It should be implemented soon. (kirillvolkovich <kirill.volkovich@jcatalog.com>, Thu Dec 22 15:26:18 2016 +0300)
+ - Decorate-jenkinsfile npm goal removed (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 21 17:50:21 2016 +0300)
+ - Move each component to its own directory (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 21 17:47:52 2016 +0300)
+ - Fixing build (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Fri Dec 16 17:03:40 2016 +0300)
+ - Adding test, codecoverage, documetnation. Updating dependencies. (Alexey Sergeev <alexey.sergeev@jcatalog.com>, Fri Dec 16 16:54:22 2016 +0300)
+ - Updating to a version to  1.0.3 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 16 14:46:45 2016 +0300)
+
 Release 1.0.2 Fri Dec 16 2016 14:46:39 GMT+0300 (+03)
 =======================================================
 
