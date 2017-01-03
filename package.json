@@ -24,7 +24,7 @@
   "license": "UNLICENSED",
   "readme": "README.md",
   "dependencies": {
-    "opuscapita-i18n": "1.0.7",
+    "opuscapita-i18n": "1.0.8",
     "react": "0.14.8",
     "react-dom": "0.14.8",
     "underscore": "1.8.3"
