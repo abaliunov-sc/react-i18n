@@ -12,7 +12,7 @@
     "test": "rimraf ./.nyc_output ./coverage && nyc mocha 'src/**/*.spec.js'",
     "start": "nodemon --watch src/server src/server/demo/index",
     "esdoc": "rimraf esdoc && esdoc -c esdoc.json",
-    "npm-build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-decorators-legacy --ignore *.spec.js,*/demo/** src/client --out-dir lib",
+    "npm-build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-decorators-legacy,lodash --ignore *.spec.js,*/demo/** src/client --out-dir lib",
     "npm-publish": "npm run npm-build && npm-publish",
     "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release"
@@ -24,7 +24,7 @@
   "license": "UNLICENSED",
   "readme": "README.md",
   "dependencies": {
-    "opuscapita-i18n": "1.0.8",
+    "opuscapita-i18n": "1.0.12",
     "react": "0.14.8",
     "react-dom": "0.14.8",
     "underscore": "1.8.3"
@@ -35,6 +35,7 @@
     "babel-eslint": "7.1.1",
     "babel-loader": "6.2.10",
     "babel-plugin-istanbul": "2.0.0",
+    "babel-plugin-lodash": "3.2.11",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.16.0",
