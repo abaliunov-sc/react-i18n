@@ -16,6 +16,15 @@
     "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release"
   },
+  "contributors": [
+    "Dmitry Divin <dmirty.divin@jcatalog.com>",
+    "Alexey Sergeev <alexey.sergeev@jcatalog.com>",
+    "Kirill Volkovich <kirill.volkovich@jcatalog.com>"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": "OpusCapitaBES/react-i18n",
   "license": "Apache-2.0",
   "readme": "README.md",
