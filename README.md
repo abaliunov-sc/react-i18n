@@ -1,4 +1,4 @@
-# OpusCapita React Intl
+# OpusCapita React i18n
 
 This is an extension for [React Intl](https://github.com/yahoo/react-intl) component.
 
@@ -96,7 +96,13 @@ class MyComponent extends React.Component {
 
 ## Development
 
-### Tests
+### Run code lint
+
+```bash
+npm run lint
+```
+
+### Run tests
 
 ```bash
 npm test

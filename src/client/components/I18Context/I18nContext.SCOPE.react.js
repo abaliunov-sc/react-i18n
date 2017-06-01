@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
 import 	FormattedMessage from '../FormattedMessage/FormattedMessage.react.js';
 
 window.FormattedMessage = FormattedMessage;

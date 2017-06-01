@@ -1,5 +1,5 @@
 import { Component, PropTypes } from 'react';
-import I18nManager from 'opuscapita-i18n/lib/utils/I18nManager';
+import { I18nManager } from '@opuscapita/i18n';
 import defaultProps from './defaultProps';
 
 class I18nContext extends Component {

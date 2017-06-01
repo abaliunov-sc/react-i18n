@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import React from 'react';
-import { I18nManager } from 'opuscapita-i18n';
+import { I18nManager } from '@opuscapita/i18n';
 import FormattedHTMLMessage from './FormattedHTMLMessage.react';
 import { render } from 'enzyme';
 

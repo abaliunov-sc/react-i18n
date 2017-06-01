@@ -1,7 +1,7 @@
 ### Synopsis
 
 I18Context React component
-Use it as a parent component if you need pass [I18nManager](https://github.com/OpusCapitaBES/js-i18n/blob/master/src/utils/I18nManager.js) to children [context](https://facebook.github.io/react/docs/context.html)
+Use it as a parent component if you need pass [I18nManager](https://github.com/OpusCapita/i18n/blob/master/src/utils/I18nManager.js) to children [context](https://facebook.github.io/react/docs/context.html)
 Instance of I18nManager exposes as `context.i18n`
 
 Now it **has no support** of `I18nManager.register()`. It should be implemented soon.

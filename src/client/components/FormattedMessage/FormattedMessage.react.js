@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'underscore';
 
 export default class FormattedMessage extends React.Component {
   static propTypes = {
@@ -11,11 +10,12 @@ export default class FormattedMessage extends React.Component {
   };
 
   render() {
-    let message = null;
+    let text = null;
     if (this.props.message) {
-      message = this.context.i18n.getMessage(this.props.message, _.omit(this.props, 'message'));
+      const { message, ...restProps } = this.props;
+      text = this.context.i18n.getMessage(message, restProps);
     }
 
-    return (<span>{message}</span>);
+    return (<span>{text}</span>);
   }
 }

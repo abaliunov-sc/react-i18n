@@ -1,5 +1,5 @@
 {
-  "name": "opuscapita-react-i18n",
+  "name": "@opuscapita/react-i18n",
   "version": "1.0.7",
   "description": "OpusCapita React I18n Extension",
   "main": "lib/index.js",
@@ -7,29 +7,29 @@
     "lib"
   ],
   "scripts": {
-    "clean": "rimraf esdoc build lib",
+    "clean": "rimraf build lib",
     "lint": "eslint src",
     "test": "rimraf ./.nyc_output ./coverage && nyc mocha 'src/**/*.spec.js'",
     "start": "nodemon --watch src/server src/server/demo/index",
-    "esdoc": "rimraf esdoc && esdoc -c esdoc.json",
     "npm-build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-decorators-legacy,lodash --ignore *.spec.js,*/demo/** src/client --out-dir lib",
     "npm-publish": "npm run npm-build && npm-publish",
     "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OpusCapitaBES/js-react-i18n.git"
-  },
-  "license": "UNLICENSED",
+  "repository": "OpusCapitaBES/react-i18n",
+  "license": "Apache-2.0",
   "readme": "README.md",
   "dependencies": {
-    "opuscapita-i18n": "1.0.12",
-    "react": "0.14.8",
-    "react-dom": "0.14.8",
-    "underscore": "1.8.3"
+    "@opuscapita/i18n": "1.0.13"
+  },
+  "peerDependencies": {
+    "react": ">= 0.14.0 || >= 15.0.0",
+    "react-dom": ">= 0.14.0 || >= 15.0.0"
   },
   "devDependencies": {
+    "@opuscapita/npm-scripts": "1.0.8",
+    "@opuscapita/react-showroom-client": "1.2.2",
+    "@opuscapita/react-showroom-server": "1.2.0",
     "babel-cli": "6.18.0",
     "babel-core": "6.20.0",
     "babel-eslint": "7.1.1",
@@ -45,7 +45,7 @@
     "css-loader": "0.26.1",
     "enzyme": "2.6.0",
     "eslint": "3.12.2",
-    "eslint-config-opuscapita": "^1.0.4",
+    "eslint-config-opuscapita": "1.0.7",
     "eslint-plugin-react": "6.8.0",
     "express": "4.14.0",
     "file-loader": "0.9.0",
@@ -57,12 +57,11 @@
     "mocha": "3.0.2",
     "nodemon": "1.11.0",
     "nyc": "10.0.0",
-    "opuscapita-npm-scripts": "1.0.5",
-    "opuscapita-showroom-client": "1.0.10",
-    "opuscapita-showroom-server": "1.0.10",
     "postcss-loader": "1.2.1",
     "raw-loader": "0.5.1",
+    "react": "0.14.8",
     "react-addons-test-utils": "0.14.7",
+    "react-dom": "0.14.8",
     "rimraf": "2.5.4",
     "source-map-loader": "0.1.5",
     "style-loader": "0.13.1",

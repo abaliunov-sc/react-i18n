@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
-import { I18nManager } from 'opuscapita-i18n';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
+import { I18nManager } from '@opuscapita/i18n';
 
 @showroomScopeDecorator
 class FormattedHTMLMessageScope extends Component {

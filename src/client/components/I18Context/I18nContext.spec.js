@@ -3,7 +3,7 @@
 import 'jsdom-global/register';
 import React, { Component, PropTypes } from 'react';
 import I18nContext from '.';
-import { I18nManager } from 'opuscapita-i18n';
+import { I18nManager } from '@opuscapita/i18n';
 import { expect } from 'chai';
 import { mount, render } from 'enzyme';
 import FormattedMessage from '../FormattedMessage/FormattedMessage.react.js';

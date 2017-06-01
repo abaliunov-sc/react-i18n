@@ -7,7 +7,7 @@ const config = require('../../../demo.webpack.config.js');
 const app = express();
 const compiler = webpack(config);
 
-require('opuscapita-showroom-server').makeLocalScan(path.resolve(__dirname, '../../client/components'));
+require('@opuscapita/react-showroom-server').makeLocalScan(path.resolve(__dirname, '../../client/components'));
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
