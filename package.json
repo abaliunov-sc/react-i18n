@@ -102,7 +102,7 @@
     "branches": 100
   },
   "engines": {
-    "node": ">=4.x",
+    "node": ">=6.x",
     "npm": ">=2.x"
   }
 }
