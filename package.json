@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "clean": "rimraf build lib",
+    "upload-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint src",
     "test": "rimraf ./.nyc_output ./coverage && nyc mocha 'src/**/*.spec.js'",
     "start": "nodemon --watch src/server src/server/demo/index",
@@ -51,6 +52,7 @@
     "babel-preset-stage-0": "6.16.0",
     "babel-register": "6.18.0",
     "chai": "3.5.0",
+    "coveralls": "2.13.1",
     "css-loader": "0.26.1",
     "enzyme": "2.6.0",
     "eslint": "3.12.2",
