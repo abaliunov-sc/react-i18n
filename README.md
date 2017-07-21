@@ -1,5 +1,5 @@
 [![CircleCI Status](https://circleci.com/gh/abaliunov-sc/react-i18n/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/abaliunov-sc/react-i18n)
-[![Coverage Status](https://coveralls.io/github/abaliunov-sc/react-i18n/badge.svg?branch=master)](https://coveralls.io/github/abaliunov-sc/react-i18n?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/abaliunov-sc/react-i18n/badge.svg)](https://coveralls.io/github/abaliunov-sc/react-i18n)
 
 
 # OpusCapita React i18n
