@@ -1,3 +1,7 @@
+[![CircleCI Status](https://circleci.com/gh/abaliunov-sc/react-i18n/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/abaliunov-sc/react-i18n)
+[![Coverage Status](https://coveralls.io/github/abaliunov-sc/react-i18n/badge.svg?branch=master)](https://coveralls.io/github/abaliunov-sc/react-i18n?branch=master)
+
+
 # OpusCapita React i18n
 
 This is an extension for [React Intl](https://github.com/yahoo/react-intl) component.
